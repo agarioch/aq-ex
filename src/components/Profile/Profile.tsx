@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Typography } from '@mui/material';
+import Card from '@mui/material/Card';
+import Link from '@mui/material/Link';
 import { Company } from '../../types/Company';
+import Socials from './Socials';
+import Details from './Details';
 
 type ProfileProps = {
   style: React.CSSProperties;
@@ -11,10 +14,18 @@ type ProfileProps = {
 const Profile = ({ member, style }: ProfileProps) => {
   return (
     <Wrapper style={style}>
-      <div></div>
-      <div>
-        <Typography variant="h1">{member.name}</Typography>
-      </div>
+      <LinksWrapper>
+        <a href={member.url}>
+          <Card elevation={1} sx={logoStyle}>
+            <img src={member.logo} alt={`${member.name} logo`} />
+          </Card>
+        </a>
+        <Link href={member.url} underline="hover">
+          {member.url}
+        </Link>
+        <Socials />
+      </LinksWrapper>
+      <Details member={member} />
     </Wrapper>
   );
 };
@@ -22,5 +33,20 @@ const Profile = ({ member, style }: ProfileProps) => {
 const Wrapper = styled.section`
   display: flex;
 `;
+const LinksWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+const logoStyle = {
+  alignItems: 'center',
+  display: 'flex',
+  height: '200px',
+  justifyContent: 'center',
+  objectFit: 'contain',
+  marginRight: '16px',
+  width: '200px',
+};
 
 export default Profile;

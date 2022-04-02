@@ -66,9 +66,27 @@ export const theme = createTheme({
     h1: {
       fontSize: '1.5rem',
       fontWeight: 700,
+      color: COLORS.gray[600],
     }
   },
   shape: {
     borderRadius: 2,
-  }
+  },
+  components: {
+    MuiIcon: {
+      styleOverrides: {
+        root: {
+          // see https://mui.com/components/icons/#font-awesome-2
+          boxSizing: 'content-box',
+          padding: 3,
+          fontSize: '1.125rem',
+        },
+      },
+    },
+    MuiIconButton: {
+      defaultProps: {
+        size: 'small',
+      }
+    }
+  },
 });

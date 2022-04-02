@@ -28,7 +28,7 @@ const ProfileLayout = styled.div`
     'news news'
     'other other'
     'footer footer';
-  gap: 8px;
+  gap: 32px 16px;
 `;
 
 export default Member;
