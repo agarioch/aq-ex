@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Card from '@mui/material/Card';
 import Link from '@mui/material/Link';
 import { Company } from '../../types/Company';
-import Socials from './Socials';
+import SocialList from './SocialList';
 import Details from './Details';
 
 type ProfileProps = {
@@ -23,7 +23,7 @@ const Profile = ({ member, style }: ProfileProps) => {
         <Link href={member.url} underline="hover">
           {member.url}
         </Link>
-        <Socials />
+        <SocialList socials={member.socials} />
       </LinksWrapper>
       <Details member={member} />
     </Wrapper>

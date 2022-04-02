@@ -67,7 +67,12 @@ export const theme = createTheme({
       fontSize: '1.5rem',
       fontWeight: 700,
       color: COLORS.gray[600],
-    }
+    },
+    h2: {
+      fontSize: '1.5rem',
+      fontWeight: 700,
+      color: COLORS.gray[600],
+    },
   },
   shape: {
     borderRadius: 2,
