@@ -73,6 +73,11 @@ export const theme = createTheme({
       fontWeight: 700,
       color: COLORS.gray[600],
     },
+    h3: {
+      fontSize: '1.5rem',
+      fontWeight: 700,
+      color: COLORS.gray[600],
+    },
   },
   shape: {
     borderRadius: 2,

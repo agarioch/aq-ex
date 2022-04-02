@@ -11,12 +11,7 @@ const Details = ({ member }: DetailsProps) => {
   return (
     <DetailsWrapper>
       <Typography variant="h1">{member.name}</Typography>
-      <Typography
-        variant="body1"
-        style={{ whiteSpace: 'pre-line', marginTop: '8px' }}
-      >
-        {member.description}
-      </Typography>
+      <DetailsParagraph>{member.description}</DetailsParagraph>
     </DetailsWrapper>
   );
 };
@@ -24,6 +19,16 @@ const Details = ({ member }: DetailsProps) => {
 const DetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const DetailsParagraph = styled.p`
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  margin-top: 8px;
+  overflow: hidden;
+  white-space: pre-line;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 `;
 
 export default Details;

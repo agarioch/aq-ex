@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Profile, Breadcrumbs, Sidebar } from '../../components';
+import {
+  Profile,
+  Breadcrumbs,
+  Sidebar,
+  Financials,
+  News,
+} from '../../components';
 import { PATH } from '../../mocks/mock';
 import { useMemberData } from '../../hooks';
+import { QUERIES } from '../../theme';
 
 const Member = () => {
   // mock getting the company id from URL router params
@@ -15,11 +22,15 @@ const Member = () => {
   if (isError) return <div>Todo: error component</div>;
 
   return (
-    <ProfileLayout>
-      <Breadcrumbs path={PATH} style={{ gridArea: 'breadcrumbs' }} />
-      <Profile member={member} style={{ gridArea: 'profile' }} />
-      <Sidebar member={member} style={{ gridArea: 'sidebar' }} />
-    </ProfileLayout>
+    <>
+      <ProfileLayout>
+        <Breadcrumbs path={PATH} style={{ gridArea: 'breadcrumbs' }} />
+        <Profile member={member} style={{ gridArea: 'profile' }} />
+        <Sidebar member={member} style={{ gridArea: 'sidebar' }} />
+        <Financials member={member} style={{ gridArea: 'financials' }} />
+      </ProfileLayout>
+      <News style={{ gridArea: 'news' }} />
+    </>
   );
 };
 
@@ -29,11 +40,17 @@ const ProfileLayout = styled.div`
   grid-template-areas:
     'breadcrumbs breadcrumbs'
     'profile sidebar'
-    'chart sidebar'
-    'news news'
-    'other other'
-    'footer footer';
+    'financials sidebar';
   grid-template-columns: 1fr 400px;
+  grid-template-rows: auto auto 1fr;
+  padding: 32px 64px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 24px 32px;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    padding: 16px 16px;
+  }
 `;
 
 export default Member;

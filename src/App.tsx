@@ -17,15 +17,6 @@ function App() {
   );
 }
 
-const Main = styled.main`
-  padding: 32px 32px;
-
-  @media ${QUERIES.tabletAndSmaller} {
-    padding: 24px 32px;
-  }
-  @media ${QUERIES.phoneAndSmaller} {
-    padding: 16px 16px;
-  }
-`;
+const Main = styled.main``;
 
 export default App;

@@ -5,6 +5,7 @@ import Link from '@mui/material/Link';
 import { Company } from '../../types/Company';
 import SocialList from './SocialList';
 import Details from './Details';
+import { COLORS } from '../../theme';
 
 type ProfileProps = {
   style: React.CSSProperties;
@@ -31,13 +32,21 @@ const Profile = ({ member, style }: ProfileProps) => {
 };
 
 const Wrapper = styled.section`
+  border-bottom: 1px solid ${COLORS.gray[300]};
   display: flex;
+  padding-bottom: 1rem;
 `;
 const LinksWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-basis: 220px;
+  flex-grow: 0;
+  flex-shrink: 0;
   gap: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 const logoStyle = {
   alignItems: 'center',

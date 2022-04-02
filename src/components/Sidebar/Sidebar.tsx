@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import { Company } from '../../types/Company';
-import DataTable from './DataTable';
+import DataTable from '../DataTable/DataTable';
 
 type SidebarProps = {
   style: React.CSSProperties;
