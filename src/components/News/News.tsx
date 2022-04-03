@@ -38,6 +38,7 @@ const NewsWrapper = styled.div`
 
   @media ${QUERIES.tabletAndSmaller} {
     padding: 24px 32px;
+    flex-direction: column;
   }
   @media ${QUERIES.phoneAndSmaller} {
     padding: 16px 16px;

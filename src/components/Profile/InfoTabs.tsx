@@ -4,6 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Icon from '@mui/material/Icon';
 import { Company } from '../../types/Company';
 import About from './About';
 import ContactList from './ContactList';
@@ -39,6 +41,8 @@ function a11yProps(index: number) {
 
 const InfoTabs = ({ member }: { member: Company }) => {
   const [value, setValue] = useState(0);
+  // Mock storing favourite
+  const [isFavourite, setIsFavourite] = useState(false);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -46,7 +50,16 @@ const InfoTabs = ({ member }: { member: Company }) => {
 
   return (
     <DetailsWrapper>
-      <Typography variant="h1">{member.name}</Typography>
+      <Header>
+        <Typography variant="h1">{member.name}</Typography>
+        <IconButton onClick={() => setIsFavourite(!isFavourite)}>
+          <Icon
+            baseClassName="fa"
+            className={'fa-heart'}
+            color={isFavourite ? 'error' : undefined}
+          />
+        </IconButton>
+      </Header>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -77,6 +90,11 @@ const DetailsWrapper = styled.div`
 const TabContentWrapper = styled.div`
   max-height: 220px;
   overflow-y: auto;
+`;
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 export default InfoTabs;

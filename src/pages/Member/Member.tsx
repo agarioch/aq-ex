@@ -41,13 +41,20 @@ const ProfileLayout = styled.div`
     'breadcrumbs breadcrumbs'
     'profile sidebar'
     'financials sidebar';
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: minmax(0, 1fr) 400px;
   grid-template-rows: auto auto 1fr;
   padding: 32px 64px;
 
   @media ${QUERIES.tabletAndSmaller} {
     padding: 24px 32px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'breadcrumbs'
+      'profile'
+      'sidebar'
+      'financials';
   }
+  /* Out of scope: implement mobile layout */
   @media ${QUERIES.phoneAndSmaller} {
     padding: 16px 16px;
   }

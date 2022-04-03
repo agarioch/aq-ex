@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../../AquisLogo.svg';
-import { COLORS } from '../../theme';
+import { COLORS, QUERIES } from '../../theme';
 import { PAGES } from '../../mocks/mock';
 
 const Header = () => {
@@ -39,6 +39,10 @@ const HeaderLogo = styled.img`
 `;
 const HeaderNav = styled.nav`
   color: ${COLORS.white};
+  @media ${QUERIES.tabletAndSmaller} {
+    // Out of scope: implement responsive navigation on smaller screens
+    display: none;
+  }
 `;
 const HeaderNavMenu = styled.ul`
   display: flex;

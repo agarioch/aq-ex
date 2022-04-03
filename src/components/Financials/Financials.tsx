@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import Kpis from './Kpis';
 import { Company } from '../../types/Company';
 import TradesChart from './TradesChart';

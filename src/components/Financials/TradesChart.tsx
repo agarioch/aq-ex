@@ -16,6 +16,7 @@ const TradesChart = ({ id }: { id: number }) => {
           style: {
             fontFamily: 'Lato, sans-serif',
           },
+          reflow: true,
         },
         rangeSelector: {
           // select 1 year of trades by default (option 4)
