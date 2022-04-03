@@ -93,10 +93,26 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          height: '36px',
+          minHeight: '36px',
+        }
+      }
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          height: '36px',
+          minHeight: '36px',
+        }
+      }
+    },
     MuiIconButton: {
       defaultProps: {
         size: 'small',
       }
     }
-  },
+  }
 });

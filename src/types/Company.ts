@@ -8,6 +8,7 @@ export type Company = {
   trading: Trading,
   tradingInfo: TradingInfo,
   keyInfo: KeyInfo,
+  contacts: Contacts,
 }
 
 // TODO: Type nested objects with exact properties
@@ -33,7 +34,11 @@ export type TradingInfo = {
   'Prior Close': string;
   'Last Trade': Date;
 };
-
+// TODO: Type nested objects with exact properties
 export type KeyInfo = {
-  [key: string]: string | number | Date
+  [key: string]: string | number | Date;
 };
+// TODO: Type nested objects with exact properties
+export type Contacts = {
+  [key: string]: string;
+}

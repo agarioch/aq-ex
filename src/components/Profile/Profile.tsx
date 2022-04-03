@@ -4,8 +4,8 @@ import Card from '@mui/material/Card';
 import Link from '@mui/material/Link';
 import { Company } from '../../types/Company';
 import SocialList from './SocialList';
-import Details from './Details';
 import { COLORS } from '../../theme';
+import InfoTabs from './InfoTabs';
 
 type ProfileProps = {
   style: React.CSSProperties;
@@ -26,7 +26,7 @@ const Profile = ({ member, style }: ProfileProps) => {
         </Link>
         <SocialList socials={member.socials} />
       </LinksWrapper>
-      <Details member={member} />
+      <InfoTabs member={member} />
     </Wrapper>
   );
 };

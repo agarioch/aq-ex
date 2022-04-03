@@ -46,5 +46,13 @@ export const COMPANY = {
     'MFID Status': 'MFT',
     'Securities in Issue': '285,842',
     Sector: 'Beverages'
+  },
+  contacts: {
+    'Business Address': 'Adnams plc, Sole Bay Brewery, Southwold, Suffolk, IP18 6JW, United Kingdom.',
+    Email: 'info@adnams.co.uk',
+    Phone: '01502 727200',
+    'Registered Address': 'Sole Bay Brewery, Southwold, Suffolk, IP18 6JW, United Kingdom.',
+    'Corporate Adviser': 'No information',
+    'Registrar': 'Link Group, 10th Floor, Central Square, 29 Wellington Street, Leeds, LS1 4DL, England.'
   }
 }
