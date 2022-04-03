@@ -30,12 +30,12 @@ const Kpi = ({ label, value, status = 'normal' }: KpiProps) => {
 };
 
 const KpiCard = styled.div`
-  /* background-color: ${COLORS.white}; */
+  align-items: center;
   border: 1px solid ${COLORS.gray[200]};
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.2rem;
 `;
 
 export default Kpi;

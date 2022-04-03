@@ -3,7 +3,6 @@ import './App.css';
 import styled from '@emotion/styled';
 import { Header } from './components/';
 import { Member } from './pages/';
-import { QUERIES } from './theme';
 
 function App() {
   return (

@@ -13,7 +13,7 @@ const Sidebar = ({ member, style }: SidebarProps) => {
       <Typography variant="h2" sx={{ mb: '0.5rem' }}>
         Trading
       </Typography>
-      <DataTable data={member.trading} />
+      <DataTable data={member.tradingInfo} />
       <Typography variant="h2" sx={{ mt: '2rem', mb: '0.5rem' }}>
         Key Information
       </Typography>

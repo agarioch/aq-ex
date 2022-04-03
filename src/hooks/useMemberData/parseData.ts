@@ -1,20 +1,17 @@
 import { Company } from "../../types/Company";
+import parseCurrency from "../../utils/parseCurrency";
 
 export default function parseData (response: any): Company {
+  const currency = response.trading.currency;
   return {
     ...response,
-    trading: {
-      ...response.trading,
-      Bid: parseCurrency(response.trading.Bid),
-      Price: parseCurrency(response.trading.Price),
-      Ask: parseCurrency(response.trading.Ask),
+    tradingInfo: {
+      Price: parseCurrency(response.trading.Price, currency),
+      'Bid / Ask': `${parseCurrency(response.trading.Bid, currency)} / ${parseCurrency(response.trading.Ask, currency)}`,
       Volume: parseInt(response.trading.Volume).toLocaleString('en-GB'),
-      'Prior Close': parseCurrency(response.trading['Prior Close']),
+      'Prior Close': parseCurrency(response.trading['Prior Close'], currency),
       'Last Trade': new Date(response.trading['Last Trade']),
     }
   }
 }
 
-function parseCurrency (value: string): string {
-  return (parseFloat(value) / 100).toLocaleString('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: 2 })
-}

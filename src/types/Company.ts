@@ -6,6 +6,7 @@ export type Company = {
   url: string,
   socials: Socials,
   trading: Trading,
+  tradingInfo: TradingInfo,
   keyInfo: KeyInfo,
 }
 
@@ -15,7 +16,22 @@ export type Socials = {
 };
 
 export type Trading = {
-  [key: string]: string | number | Date
+  Symbol: string;
+  currency: string;
+  Bid: number;
+  Ask: number;
+  Price: number;
+  'Prior Close': number;
+  Volume: number;
+  'Last Trade': string;
+};
+
+export type TradingInfo = {
+  Price: string;
+  'Bid / Ask': string;
+  Volume: number;
+  'Prior Close': string;
+  'Last Trade': Date;
 };
 
 export type KeyInfo = {

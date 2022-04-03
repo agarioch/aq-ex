@@ -29,6 +29,8 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   max-height: 70px;
   padding: 16px 24px;
+  position: sticky;
+  top: 0;
   width: 100%;
 `;
 const HeaderLogo = styled.img`

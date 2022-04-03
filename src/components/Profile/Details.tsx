@@ -25,6 +25,7 @@ const DetailsParagraph = styled.p`
   display: -webkit-box;
   text-overflow: ellipsis;
   margin-top: 8px;
+  max-width: 100ch;
   overflow: hidden;
   white-space: pre-line;
   -webkit-line-clamp: 10;

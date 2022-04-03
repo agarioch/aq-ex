@@ -1,4 +1,3 @@
-import { Company } from "../types/Company";
 
 export const PAGES = [
   'About',
@@ -18,7 +17,7 @@ export const PATH = [
   {name: 'Adnams', path: `#`, pageId: 3},
 ]
 
-export const COMPANY: Company = {
+export const COMPANY = {
   id: 0,
   name: 'Adnams plc',
   description: "Adnams is a brewer, distiller, pub owner and retailer based in Southwold on the Suffolk coast.\n\nIt is a company defined by its values which can be summarized as \"doing things right\". It has been brewing for over 140 years and produces a range of award winning cask and bottled beers, which are available in pubs and supermarkets nationwide. The Company has unlisted 'A' Ordinary Shares and its 'B' Ordinary Shares are traded on AQSE Growth Market.",
@@ -31,6 +30,7 @@ export const COMPANY: Company = {
   },
   trading: {
     Symbol: 'ADB',
+    currency: 'GBP',
     Bid: 8900,
     Ask: 9400,
     Price: 9150,
