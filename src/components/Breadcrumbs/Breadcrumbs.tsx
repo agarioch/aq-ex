@@ -1,5 +1,6 @@
 import React from 'react';
-import { Breadcrumbs as MuiBreadcrumbs, Link } from '@mui/material';
+import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 import { COLORS } from '../../theme';
 
 type Path = {

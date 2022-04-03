@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import MenuItem from '@mui/material/MenuItem';
 import logo from '../../AquisLogo.svg';
 import { COLORS } from '../../theme';
-import { MenuItem } from '@mui/material';
 import { PAGES } from '../../mocks/mock';
 
 const Header = () => {

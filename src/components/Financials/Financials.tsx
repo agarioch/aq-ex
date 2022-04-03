@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Kpi from './Kpi';
-import { Company } from '../../types/Company';
 import parseCurrency from '../../utils/parseCurrency';
 import { QUERIES } from '../../theme';
+import { Company } from '../../types/Company';
 
 type FinancialsProps = {
   member: Company;
