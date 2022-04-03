@@ -8,14 +8,16 @@ async function fetchRequest(path: string) {
 }
 
 export function getMemberTrades(id: number): Promise<Trade[]> {
-  return fetchRequest(`/mock/trades/${id}`).then(response => parseTrades(response));
+  return fetchRequest(`/mock/trades/${id}`).then(response => parseTrades(response)).then(response => response.sort((a, b) => a.Timestamp - b.Timestamp));
 }
 
 function parseTrades(response: any): Trade[] {
-  return response.map((trade: Trade) => {
+  return response.map((trade: any) => {
     return {
-      ...trade,
-      Date: new Date(trade.Date)
+      Volume: parseInt(trade.Volume),
+      Price: parseFloat(trade.Price),
+      Date: new Date(trade.Date),
+      Timestamp: new Date(trade.DateTime).getTime()
     }
   })
 }
