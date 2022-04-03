@@ -17,7 +17,7 @@ const Member = () => {
   // mock fetching the company data from the API
   const { member, isLoading, isError } = useMemberData(routerParam);
 
-  // TODO: build components to render skeleton loading state and to handle errors
+  // Out of scope: build components to render skeleton loading state and to handle errors
   if (isLoading || !member) return <div>Todo: loading component</div>;
   if (isError) return <div>Todo: error component</div>;
 

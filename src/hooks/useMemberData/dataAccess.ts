@@ -8,6 +8,6 @@ async function fetchRequest(path: string) {
 }
 
 export function getMember(id: number): Promise<Company> {
-  return fetchRequest(`/mock/company${id}`).then(response => parseData(response));
+  return fetchRequest(`/mock/company/${id}`).then(response => parseData(response));
 }
 

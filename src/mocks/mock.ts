@@ -1,4 +1,3 @@
-
 export const PAGES = [
   'About',
   'Exchange',
