@@ -3,25 +3,28 @@ import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 import { COLORS, QUERIES } from '../../theme';
 import DataTable from '../DataTable/DataTable';
+import Announcements from './Announcements';
+import { Company } from '../../types/Company';
 
 type NewsProps = {
-  style: React.CSSProperties;
+  member: Company;
+  style?: React.CSSProperties;
 };
 
-const News = ({ style }: NewsProps) => {
+const News = ({ style, member }: NewsProps) => {
   return (
     <NewsWrapper style={style}>
       <article style={{ flex: 1 }}>
         <Typography variant="h2" sx={{ mb: '0.5rem' }}>
           Announcements
         </Typography>
-        <DataTable data={{ test: 'hi', 'another test': 'something' }} />
+        <Announcements announcements={member.announcements} />
       </article>
       <article style={{ flex: 1 }}>
         <Typography variant="h2" sx={{ mb: '0.5rem' }}>
           Research
         </Typography>
-        <DataTable data={{ test: 'hi' }} />
+        No research yet!
       </article>
     </NewsWrapper>
   );

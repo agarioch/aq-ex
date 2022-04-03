@@ -9,6 +9,7 @@ export type Company = {
   tradingInfo: TradingInfo,
   keyInfo: KeyInfo,
   contacts: Contacts,
+  announcements: Announcement[]
 }
 
 // TODO: Type nested objects with exact properties
@@ -41,4 +42,13 @@ export type KeyInfo = {
 // TODO: Type nested objects with exact properties
 export type Contacts = {
   [key: string]: string;
+}
+
+export type Announcement = {
+  id: number,
+  date: Date,
+  title: string,
+  type: string,
+  // displaying pdf content out of scope for now
+  content: null
 }

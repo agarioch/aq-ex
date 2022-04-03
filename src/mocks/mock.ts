@@ -54,5 +54,35 @@ export const COMPANY = {
     'Registered Address': 'Sole Bay Brewery, Southwold, Suffolk, IP18 6JW, United Kingdom.',
     'Corporate Adviser': 'No information',
     'Registrar': 'Link Group, 10th Floor, Central Square, 29 Wellington Street, Leeds, LS1 4DL, England.'
-  }
+  },
+  announcements: [
+    {
+      id: 0,
+      date: '2022-04-01T12:00:00Z',
+      title: 'Adnams PLC - Director/PDMR Shareholding',
+      type: 'Officers',
+      content: null
+    },
+    {
+      id: 1,
+      date: '2022-04-01T12:00:00Z',
+      title: 'Adnams PLC - Interim Dividend',
+      type: 'Dividend',
+      content: null
+    },
+    {
+      id: 2,
+      date: '2022-04-01T12:00:00Z',
+      title: 'Adnams PLC - Interim Dividend',
+      type: 'Dividend',
+      content: null
+    },
+    {
+      id: 3,
+      date: '2022-04-01T12:00:00Z',
+      title: 'Adnams PLC - Interim Dividend',
+      type: 'Dividend',
+      content: null
+    },
+  ]
 }

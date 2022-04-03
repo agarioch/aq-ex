@@ -29,7 +29,7 @@ const Member = () => {
         <Sidebar member={member} style={{ gridArea: 'sidebar' }} />
         <Financials member={member} style={{ gridArea: 'financials' }} />
       </ProfileLayout>
-      <News style={{ gridArea: 'news' }} />
+      <News member={member} />
     </>
   );
 };
