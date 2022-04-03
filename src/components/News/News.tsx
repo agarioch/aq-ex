@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 import { COLORS, QUERIES } from '../../theme';
-import DataTable from '../DataTable/DataTable';
 import Announcements from './Announcements';
 import { Company } from '../../types/Company';
 

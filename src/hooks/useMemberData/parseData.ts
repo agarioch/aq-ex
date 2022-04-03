@@ -6,6 +6,7 @@ export default function parseData (response: any): Company {
   return {
     ...response,
     tradingInfo: {
+      Symbol: response.trading.Symbol,
       Price: parseCurrency(response.trading.Price, currency),
       'Bid / Ask': `${parseCurrency(response.trading.Bid, currency)} / ${parseCurrency(response.trading.Ask, currency)}`,
       Volume: parseInt(response.trading.Volume).toLocaleString('en-GB'),
