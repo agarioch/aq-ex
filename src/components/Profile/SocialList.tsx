@@ -25,7 +25,7 @@ type ValidSocial = keyof typeof SocialIcons;
 const SocialList = ({ socials, style }: SocialsProps) => (
   <div>
     {Object.entries(socials).map(([name, url]) =>
-      Object.hasOwn(SocialIcons, name) ? (
+      Object.prototype.hasOwnProperty.call(SocialIcons, name) ? (
         <IconButton
           key={name}
           arial-label={name}
