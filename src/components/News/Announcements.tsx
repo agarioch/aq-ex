@@ -11,21 +11,19 @@ type AnnouncementsProps = {
 };
 
 const Announcements = ({ announcements }: AnnouncementsProps) => {
-  const rows = announcements.map((announcement) => {
-    return (
-      <TableRow key={announcement.id}>
-        <TableCell size="small" sx={{ paddingLeft: 0 }}>
-          {announcement.title}
-        </TableCell>
-        <TableCell size="small" sx={{ paddingLeft: 0 }}>
-          {announcement.type}
-        </TableCell>
-        <TableCell size="small">
-          {announcement.date.toLocaleDateString()}
-        </TableCell>
-      </TableRow>
-    );
-  });
+  const rows = announcements.map((announcement) => (
+    <TableRow key={announcement.id}>
+      <TableCell size="small" sx={{ paddingLeft: 0 }}>
+        {announcement.title}
+      </TableCell>
+      <TableCell size="small" sx={{ paddingLeft: 0 }}>
+        {announcement.type}
+      </TableCell>
+      <TableCell size="small">
+        {announcement.date.toLocaleDateString()}
+      </TableCell>
+    </TableRow>
+  ));
 
   return (
     <TableContainer>

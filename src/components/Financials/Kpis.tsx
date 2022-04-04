@@ -13,6 +13,7 @@ const Financials = ({ member }: FinancialsProps) => {
     member.trading.Price,
     member.trading['Prior Close']
   );
+
   return (
     <KpiWrapper>
       <Kpi label="Price" value={member.tradingInfo.Price} />

@@ -10,24 +10,22 @@ type NewsProps = {
   style?: React.CSSProperties;
 };
 
-const News = ({ style, member }: NewsProps) => {
-  return (
-    <NewsWrapper style={style}>
-      <article style={{ flex: 1 }}>
-        <Typography variant="h2" sx={{ mb: '0.5rem' }}>
-          Announcements
-        </Typography>
-        <Announcements announcements={member.announcements} />
-      </article>
-      <article style={{ flex: 1 }}>
-        <Typography variant="h2" sx={{ mb: '0.5rem' }}>
-          Research
-        </Typography>
-        No research yet!
-      </article>
-    </NewsWrapper>
-  );
-};
+const News = ({ style, member }: NewsProps) => (
+  <NewsWrapper style={style}>
+    <article style={{ flex: 1 }}>
+      <Typography variant="h2" sx={{ mb: '0.5rem' }}>
+        Announcements
+      </Typography>
+      <Announcements announcements={member.announcements} />
+    </article>
+    <article style={{ flex: 1 }}>
+      <Typography variant="h2" sx={{ mb: '0.5rem' }}>
+        Research
+      </Typography>
+      No research yet!
+    </article>
+  </NewsWrapper>
+);
 
 const NewsWrapper = styled.div`
   background-color: ${COLORS.gray[200]};

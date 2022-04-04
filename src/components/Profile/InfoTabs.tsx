@@ -16,35 +16,29 @@ type TabPanelProps = {
   value: number;
 };
 
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
+const TabPanel = ({ children, value, index, ...rest }: TabPanelProps) => (
+  <div
+    role="tabpanel"
+    hidden={value !== index}
+    id={`simple-tabpanel-${index}`}
+    aria-labelledby={`simple-tab-${index}`}
+    {...rest}
+  >
+    {value === index && <Box sx={{ pt: 1 }}>{children}</Box>}
+  </div>
+);
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ pt: 1 }}>{children}</Box>}
-    </div>
-  );
-}
-
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
+const a11yProps = (index: number) => ({
+  id: `simple-tab-${index}`,
+  'aria-controls': `simple-tabpanel-${index}`,
+});
 
 const InfoTabs = ({ member }: { member: Company }) => {
   const [value, setValue] = useState(0);
   // Mock storing favourite
   const [isFavourite, setIsFavourite] = useState(false);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 

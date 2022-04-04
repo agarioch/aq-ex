@@ -10,21 +10,17 @@ type ContactsProps = {
   contacts: Contacts;
 };
 
-const ContactList = ({ contacts }: ContactsProps) => {
-  return (
-    <ListColumns>
-      <List dense={true}>
-        {Object.entries(contacts).map(([label, value]) => {
-          return (
-            <ListItem key={label}>
-              <ListItemText primary={value} secondary={label} />
-            </ListItem>
-          );
-        })}
-      </List>
-    </ListColumns>
-  );
-};
+const ContactList = ({ contacts }: ContactsProps) => (
+  <ListColumns>
+    <List dense={true}>
+      {Object.entries(contacts).map(([label, value]) => (
+        <ListItem key={label}>
+          <ListItemText primary={value} secondary={label} />
+        </ListItem>
+      ))}
+    </List>
+  </ListColumns>
+);
 
 const ListColumns = styled.div`
   columns: 2;

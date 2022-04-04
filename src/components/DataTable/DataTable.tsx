@@ -13,21 +13,16 @@ type DataTableProps = {
 };
 
 const DataTable = ({ data }: DataTableProps) => {
-  const dataRows = Object.entries(data).map(([key, value]) => {
-    return (
-      <TableRow key={key}>
-        <TableCell
-          size="small"
-          sx={{ paddingLeft: 0, color: COLORS.gray[500] }}
-        >
-          {key}
-        </TableCell>
-        <TableCell size="small">
-          {typeof value === 'object' ? value.toLocaleDateString() : value}
-        </TableCell>
-      </TableRow>
-    );
-  });
+  const dataRows = Object.entries(data).map(([key, value]) => (
+    <TableRow key={key}>
+      <TableCell size="small" sx={{ paddingLeft: 0, color: COLORS.gray[500] }}>
+        {key}
+      </TableCell>
+      <TableCell size="small">
+        {typeof value === 'object' ? value.toLocaleDateString() : value}
+      </TableCell>
+    </TableRow>
+  ));
 
   return (
     <TableContainer>

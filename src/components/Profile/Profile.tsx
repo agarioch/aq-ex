@@ -12,24 +12,22 @@ type ProfileProps = {
   member: Company;
 };
 
-const Profile = ({ member, style }: ProfileProps) => {
-  return (
-    <Wrapper style={style}>
-      <LinksWrapper>
-        <a href={member.url}>
-          <Card elevation={1} sx={logoStyle}>
-            <img src={member.logo} alt={`${member.name} logo`} />
-          </Card>
-        </a>
-        <Link href={member.url} underline="hover">
-          {member.url}
-        </Link>
-        <SocialList socials={member.socials} />
-      </LinksWrapper>
-      <InfoTabs member={member} />
-    </Wrapper>
-  );
-};
+const Profile = ({ member, style }: ProfileProps) => (
+  <Wrapper style={style}>
+    <LinksWrapper>
+      <a href={member.url}>
+        <Card elevation={1} sx={logoStyle}>
+          <img src={member.logo} alt={`${member.name} logo`} />
+        </Card>
+      </a>
+      <Link href={member.url} underline="hover">
+        {member.url}
+      </Link>
+      <SocialList socials={member.socials} />
+    </LinksWrapper>
+    <InfoTabs member={member} />
+  </Wrapper>
+);
 
 const Wrapper = styled.section`
   border-bottom: 1px solid ${COLORS.gray[300]};

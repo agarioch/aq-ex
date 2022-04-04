@@ -22,10 +22,10 @@ const SocialIcons = {
 
 type ValidSocial = keyof typeof SocialIcons;
 
-const SocialList = ({ socials, style }: SocialsProps) => {
-  const socialIcons = Object.entries(socials).map(([name, url]) => {
-    if (Object.hasOwn(SocialIcons, name)) {
-      return (
+const SocialList = ({ socials, style }: SocialsProps) => (
+  <div>
+    {Object.entries(socials).map(([name, url]) =>
+      Object.hasOwn(SocialIcons, name) ? (
         <IconButton
           key={name}
           arial-label={name}
@@ -38,12 +38,9 @@ const SocialList = ({ socials, style }: SocialsProps) => {
             className={'fa-' + SocialIcons[name as ValidSocial]}
           />
         </IconButton>
-      );
-    }
-    return null;
-  });
-
-  return <div>{socialIcons}</div>;
-};
+      ) : null
+    )}
+  </div>
+);
 
 export default SocialList;

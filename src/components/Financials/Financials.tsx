@@ -7,12 +7,11 @@ type FinancialsProps = {
   member: Company;
   style?: React.CSSProperties;
 };
-const Financials = ({ member, style }: FinancialsProps) => {
-  return (
-    <section style={style}>
-      <Kpis member={member} />
-      <TradesChart id={member.id} />
-    </section>
-  );
-};
+const Financials = ({ member, style }: FinancialsProps) => (
+  <section style={style}>
+    <Kpis member={member} />
+    <TradesChart id={member.id} />
+  </section>
+);
+
 export default Financials;

@@ -5,9 +5,9 @@ type AboutProps = {
   description: string;
 };
 
-const About = ({ description }: AboutProps) => {
-  return <AboutParagraph>{description}</AboutParagraph>;
-};
+const About = ({ description }: AboutProps) => (
+  <AboutParagraph>{description}</AboutParagraph>
+);
 
 const AboutParagraph = styled.p`
   display: -webkit-box;
